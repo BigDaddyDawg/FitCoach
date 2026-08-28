@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#0F766E" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="TRENCH" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="application-name" content="TRENCH" />
+    <link rel="manifest" href="manifest.webmanifest?v=5" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" sizes="180x180" />
+    <link rel="apple-touch-icon" href="icon-192.png" sizes="192x192" />
+    <link rel="icon" type="image/png" href="icon-192.png" sizes="192x192" />
+    <link rel="icon" type="image/svg+xml" href="icon.svg" />
+    <title>TRENCH</title>
+    <style>
+      /* Critical: RN Web flex:1 collapses to 0px unless the height chain is explicit. */
+      html,
+      body {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        background: #f8fafc;
+        color: #0f172a;
+        font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      }
+      #root {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        min-height: 100%;
+        min-height: 100dvh;
+      }
+      #root > div {
+        flex: 1 1 auto;
+        min-height: 0;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+    </style>
+  <meta name="theme-color" content="#0F766E">
+<meta name="description" content="Heavy work. Armor built. PBs, live coach, sessions.">
+<link rel="icon" href="/FitCoach/favicon.ico" /></head>
+  <body>
+    <div id="root"></div>
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", function () {
+          navigator.serviceWorker.register("service-worker.js?v=5").catch(function () {});
+        });
+      }
+    </script>
+  <script src="/FitCoach/_expo/static/js/web/index-06503df67ebd1722c373f5915a24f930.js" defer></script>
+</body>
+</html>
